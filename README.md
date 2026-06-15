@@ -12,6 +12,37 @@ plugins, `@oai/sky`, or any runtime files. It only contains diagnostics,
 instructions, and minimal patch scripts that operate on files already present
 on the user's own machine.
 
+## Beginner Quick Start
+
+You do not need to know Git.
+
+1. Open the GitHub page.
+2. Click `Code` -> `Download ZIP`.
+3. Unzip the file.
+4. Open the unzipped folder in PowerShell.
+5. Run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\install-skill.ps1
+```
+
+6. Restart Codex Desktop, or open a new Codex chat.
+7. Ask Codex:
+
+```text
+Use repair-codex-computer-use to diagnose my Windows Computer Use plugin.
+```
+
+This only installs the helper skill. It does not silently change Codex runtime
+files. The repair scripts still diagnose first, create backups, and require an
+explicit `-Apply` when a file-changing repair is needed.
+
+## One Sentence Summary
+
+This tool helps when Windows Codex Desktop cannot load Computer Use because
+`openai-bundled` is missing or because `@oai/sky@0.4.10` blocks a known internal
+Computer Use import through package `exports`.
+
 ## Exact Problem This Targets
 
 Use this project when at least one of these is true:
@@ -101,9 +132,11 @@ Then choose the smallest matching fix:
 - Scripts do not delete the user's `.codex` directory.
 - Scripts do not automatically change Codex sandbox mode.
 
-## Quick Start
+## Manual Script Usage
 
-Open PowerShell on Windows.
+Use this if you do not want to install the Codex skill.
+
+Open PowerShell in this repository folder on Windows.
 
 Run read-only diagnosis:
 
@@ -140,9 +173,10 @@ This project was built from a verified Windows repair where:
 - The real Computer Use runtime could call `sky.list_apps()` and return
   Windows applications.
 
-## Install As A Codex Skill
+## Manual Skill Install
 
-Copy the inner skill folder into your Codex skills directory:
+The beginner install script above is recommended. To install manually, copy the
+inner skill folder into your Codex skills directory:
 
 ```powershell
 Copy-Item -Recurse `
@@ -174,6 +208,7 @@ isolation, not automatically unsafe.
 ## Files
 
 ```text
+install-skill.ps1
 repair-codex-computer-use/
   SKILL.md
   scripts/
